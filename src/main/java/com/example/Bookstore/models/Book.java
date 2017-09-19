@@ -1,14 +1,25 @@
 package com.example.Bookstore.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Book{
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String title;
 	private String author;
-	private Integer year;
+	private int year;
 	private String isbn;
-	private Integer price;
+	private Double price;
 	
-	public Book(Long id, String title, String author, Integer year, String isbn, Integer price) {
+	public Book(){}
+	
+	public Book(Long id, String title, String author, int year, String isbn, Double price) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -42,11 +53,11 @@ public class Book{
 		this.author = author;
 	}
 
-	public Integer getYear() {
+	public int getYear() {
 		return year;
 	}
 
-	public void setYear(Integer year) {
+	public void setYear(int year) {
 		this.year = year;
 	}
 
@@ -58,11 +69,11 @@ public class Book{
 		this.isbn = isbn;
 	}
 
-	public Integer getPrice() {
+	public Double getPrice() {
 		return price;
 	}
 
-	public void setPrice(Integer price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 
