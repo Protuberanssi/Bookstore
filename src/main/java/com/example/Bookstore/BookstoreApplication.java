@@ -29,7 +29,9 @@ public class BookstoreApplication {
 			brepository.save(new Book(null, "Animal Farm", "George Orwell", 1945, "2212345-5", 29.99));
 
 			User user1 = new User("user", "$2a$10$TBGA50vNgT6elbZuHw3pC.uDD90SlPiMnlvAb/hj6XxDqjOfawfP.", "USER");
+			//password = 1234567
 			User user2 = new User("admin", "$2a$10$68sgSp8a6ofHdZwffk9/9uNnbiIcrQYFz/ssfIBlTglt/HLgA9Pwi", "ADMIN");
+			//password = password
 			urepository.save(user1);
 			urepository.save(user2);
 			
