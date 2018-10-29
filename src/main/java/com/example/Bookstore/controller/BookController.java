@@ -25,7 +25,7 @@ public class BookController{
 		return "login";
 	}
 	
-	@RequestMapping(value="/booklist") // index
+	@RequestMapping(value="/") // index
 		public String doSomething(Model model){
 		model.addAttribute("book", new Book());
 		model.addAttribute("books", repository.findAll());
